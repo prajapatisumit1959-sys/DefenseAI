@@ -1,0 +1,133 @@
+import { InterviewSession, BehavioralSignal } from '../types';
+
+export const SAMPLE_INTERVIEWS: InterviewSession[] = [
+  {
+    id: 'INT-8921',
+    candidateName: 'Elena Rostova',
+    candidateRole: 'Senior Distributed Systems Engineer',
+    candidateEmail: 'elena.rostova@example.com',
+    date: '2026-09-28 · 09:30 AM',
+    durationMinutes: 48,
+    overallSignalLevel: 'low',
+    reviewStatus: 'verified_authentic',
+    primarySignalsCount: 1,
+    reviewerNotes: 'Responses showed natural problem formulation and live architecture reasoning.',
+    assignedRecruiter: 'Sarah Jenkins',
+  },
+  {
+    id: 'INT-8919',
+    candidateName: 'Marcus Vance',
+    candidateRole: 'Principal Cloud Architect',
+    candidateEmail: 'm.vance@example.com',
+    date: '2026-09-27 · 03:15 PM',
+    durationMinutes: 55,
+    overallSignalLevel: 'moderate',
+    reviewStatus: 'review_required' as any,
+    primarySignalsCount: 4,
+    reviewerNotes: 'Repeated latency gaps before answering technical schema questions.',
+    assignedRecruiter: 'Alex Chen',
+  },
+  {
+    id: 'INT-8918',
+    candidateName: 'Devon Thorne',
+    candidateRole: 'Lead Security Operations Engineer',
+    candidateEmail: 'd.thorne@example.com',
+    date: '2026-09-27 · 01:00 PM',
+    durationMinutes: 42,
+    overallSignalLevel: 'elevated',
+    reviewStatus: 'review_required' as any,
+    primarySignalsCount: 7,
+    reviewerNotes: 'Audio synthesis cadence anomaly flagged; recruiter follow-up requested.',
+    assignedRecruiter: 'Sarah Jenkins',
+  },
+  {
+    id: 'INT-8915',
+    candidateName: 'Amina Al-Mansoor',
+    candidateRole: 'Machine Learning Infrastructure Engineer',
+    candidateEmail: 'amina.m@example.com',
+    date: '2026-09-26 · 11:00 AM',
+    durationMinutes: 50,
+    overallSignalLevel: 'low',
+    reviewStatus: 'cleared',
+    primarySignalsCount: 0,
+    reviewerNotes: 'Consistent eye-contact, coherent live whiteboard coding walkthrough.',
+    assignedRecruiter: 'David Miller',
+  },
+  {
+    id: 'INT-8912',
+    candidateName: 'Tatsuya Sato',
+    candidateRole: 'Staff Frontend Engineer',
+    candidateEmail: 't.sato@example.com',
+    date: '2026-09-25 · 04:30 PM',
+    durationMinutes: 45,
+    overallSignalLevel: 'low',
+    reviewStatus: 'verified_authentic',
+    primarySignalsCount: 1,
+    reviewerNotes: 'Verified deep knowledge of browser render trees and memory management.',
+    assignedRecruiter: 'Alex Chen',
+  },
+];
+
+export const SAMPLE_SIGNALS: BehavioralSignal[] = [
+  {
+    id: 'SIG-104',
+    timestamp: '14:22',
+    category: 'Audio Latency',
+    severity: 'moderate',
+    description: 'Delayed onset response window (6.2s delay) preceded by dual audio input spike.',
+    explainabilityNote: 'Candidate may have experienced network buffering or consultive delay. Not conclusive of external assistance.',
+    suggestedFollowUp: 'Ask candidate to walk through alternative distributed cache eviction policies under network partition.',
+  },
+  {
+    id: 'SIG-105',
+    timestamp: '26:40',
+    category: 'Gaze Alignment',
+    severity: 'moderate',
+    description: 'Persistent 45-degree off-axis focal tracking during algorithmic complexity explanation.',
+    explainabilityNote: 'Candidate has dual monitor setup or notes on external display. Recruiter verification advised.',
+    suggestedFollowUp: 'Request live coding on shared editor without screen switches.',
+  },
+  {
+    id: 'SIG-106',
+    timestamp: '38:15',
+    category: 'Speech Consistency',
+    severity: 'elevated',
+    description: 'Sudden syntactic shift from conversational tone to formal recitation of documentation excerpts.',
+    explainabilityNote: 'Unusual lexical entropy drop. May reflect prepared memorization or generated script reading.',
+    suggestedFollowUp: 'Pose an unscripted edge case questioning trade-offs between Raft and Paxos.',
+  },
+];
+
+export const DASHBOARD_METRICS = [
+  {
+    title: 'Interviews Analyzed',
+    value: '148',
+    deltaText: '+12 this week',
+    deltaType: 'neutral' as const,
+    description: 'Total completed sessions with telemetry recorded',
+  },
+  {
+    title: 'Low Risk',
+    value: '114',
+    deltaText: '77.0% of total',
+    deltaType: 'positive' as const,
+    description: 'Consistent behavioral baseline, standard human sign-off',
+  },
+  {
+    title: 'Review Required',
+    value: '26',
+    deltaText: '17.5% queued',
+    deltaType: 'warning' as const,
+    description: 'Inconsistencies detected requiring human interviewer evaluation',
+  },
+  {
+    title: 'High Risk Signals',
+    value: '8',
+    deltaText: '5.4% flagged',
+    deltaType: 'alert' as const,
+    description: 'Multi-vector anomaly clusters requiring senior recruiter audit',
+  },
+];
+
+export const SYSTEM_DISCLAIMER =
+  'DefenseAI is a recruiter decision-support system. It highlights behavioral signals and potential inconsistencies to guide human inquiry. It does NOT automatically judge or determine cheating, deception, or unauthorized AI usage.';

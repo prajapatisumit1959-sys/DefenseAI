@@ -1,0 +1,10 @@
+{
+  "name": "DefenseAI",
+  "description": "AI-Assisted Interview Security & Analysis Platform providing recruiter decision-support for evaluating interview consistency and signals.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
